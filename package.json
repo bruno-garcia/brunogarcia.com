@@ -1,0 +1,8 @@
+{
+  "name": "brunogarcia.com",
+  "version": "1.0.0",
+  "author": "Bruno Garcia",
+  "dependencies": {
+    "firebase-tools": "3.17.4"
+  }
+}
