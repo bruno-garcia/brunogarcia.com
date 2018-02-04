@@ -1,4 +1,4 @@
-# index of brunogarcia.com
+# index of [brunogarcia.com](https://brunogarcia.com)
 
 A single static html file with an image and some links
 
