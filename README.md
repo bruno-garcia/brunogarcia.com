@@ -15,7 +15,7 @@ Browse [localhost](http://localhost)
 
 ```shell
 npm install
-node node_modules/firebase-tools/bin/firebase login
-node node_modules/firebase-tools/bin/firebase init
-node node_modules/firebase-tools/bin/firebase deploy
+npx firebase-tools login
+npx firebase-tools init
+npx firebase-tools deploy
 ```

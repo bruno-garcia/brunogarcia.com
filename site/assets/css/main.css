@@ -25,6 +25,7 @@ a {
     margin: auto;
     display: inline-flex;
     vertical-align: middle;
+    align-items: center;
 }
 
 @font-face {
@@ -53,6 +54,36 @@ a {
   float:left;
 }
 
+.icon-bluesky {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 35px;
+}
+
+.icon-bluesky svg {
+  width: 4.2em;
+  height: 4.2em;
+}
+
+.icon-bluesky:before {
+  display: none;
+}
+
+.icon-npm {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 35px;
+}
+
+.icon-npm svg {
+  width: 4.8em;
+  height: 4.2em;
+}
+
+.icon-npm:before {
+  display: none;
+}
+
 .icon-github:before {
   content: "\61";
 }
@@ -67,4 +98,76 @@ a {
 }
 .icon-rss:before {
   content: "\66";
+}
+
+.projects {
+    padding-top: 3%;
+    font-size: 0.95em;
+    color: #555;
+    letter-spacing: 0.02em;
+}
+
+.projects-label {
+    color: #888;
+    margin-right: 0.3em;
+}
+
+.projects a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.projects a:hover {
+    border-bottom-color: #333;
+}
+
+.separator {
+    margin: 0 0.5em;
+    color: #aaa;
+}
+
+@media (max-width: 600px) {
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        font-size: 2.2em;
+        padding-left: 10px;
+    }
+
+    .icon-bluesky {
+        padding-left: 10px;
+    }
+
+    .icon-bluesky svg {
+        width: 1.9em;
+        height: 1.9em;
+    }
+
+    .icon-npm {
+        padding-left: 10px;
+    }
+
+    .icon-npm svg {
+        width: 2.2em;
+        height: 1.9em;
+    }
+
+    .links :first-child {
+        padding-left: 0;
+    }
+
+    .links :first-child:before {
+        padding-left: 0;
+    }
+
+    .links {
+        padding-top: 12%;
+    }
+
+    .projects {
+        padding-top: 6%;
+        font-size: 0.75em;
+        white-space: nowrap;
+    }
 }
