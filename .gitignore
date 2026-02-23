@@ -21,3 +21,4 @@ src/public/
 public/
 resources/
 .hugo_build.lock
+tmp/

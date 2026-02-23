@@ -61,7 +61,7 @@ params:
 
   displayFullLangName: true
   images:
-    - "https://brunogarcia.com/assets/img/cover.jpg"
+    - "/img/profile.jpg"
   cover:
     responsiveImages: true
   profileMode:
