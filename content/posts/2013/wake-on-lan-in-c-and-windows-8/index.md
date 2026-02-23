@@ -12,6 +12,7 @@ cover:
     hiddenInSingle: true
 aliases:
   - /blogger/2013/wake-on-lan-in-c-and-windows-8/
+  - /2013/04/wake-on-lan-in-c-and-windows-8.html
 description: "Sending Wake-on-LAN magic packets in C# to remotely power on machines over the network, with Windows 8 considerations."
 ---
 

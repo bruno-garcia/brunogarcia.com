@@ -11,6 +11,7 @@ cover:
     small: true
 aliases:
   - /blogger/2012/top-level-domains-and-punycode-with-c/
+  - /2012/11/top-level-domains-and-punycode-with-c.html
 description: "Working with internationalized domain names (IDN) and Punycode encoding in C# for top-level domain validation."
 ---
 

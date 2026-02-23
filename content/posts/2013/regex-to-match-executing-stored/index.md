@@ -7,6 +7,7 @@ showToc: false
 draft: false
 aliases:
   - /blogger/2013/regex-to-match-executing-stored/
+  - /2013/02/regex-to-match-executing-stored.html
 description: "Using regex to find and match stored procedure calls nested inside other stored procedures in SQL Server."
 ---
 

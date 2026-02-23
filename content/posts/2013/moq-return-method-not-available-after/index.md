@@ -11,6 +11,7 @@ cover:
     small: true
 aliases:
   - /blogger/2013/moq-return-method-not-available-after/
+  - /2013/03/moq-return-method-not-available-after.html
 description: "Fix for Moq Return method not showing after Setup — caused by missing generic type parameter when mocking methods."
 ---
 

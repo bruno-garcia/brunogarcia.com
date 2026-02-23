@@ -13,6 +13,7 @@ cover:
 
 aliases:
   - /blogger/2020/swift-adventures-cocoalumberjack-logger/
+  - /2020/09/swift-adventures-cocoalumberjack-logger.html
 description: "Integrating CocoaLumberjack with Sentry in Swift - sending iOS log breadcrumbs to your error tracking dashboard."
 ---
 

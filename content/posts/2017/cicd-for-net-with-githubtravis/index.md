@@ -12,6 +12,7 @@ cover:
     hiddenInSingle: true
 aliases:
   - /blogger/2017/cicd-for-net-with-githubtravis/
+  - /2017/12/cicd-for-net-with-githubtravis.html
 description: "Setting up CI/CD for .NET Core libraries with GitHub, Travis-CI, AppVeyor, Codecov, and automated NuGet publishing."
 ---
 

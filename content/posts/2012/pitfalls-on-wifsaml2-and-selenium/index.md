@@ -7,6 +7,7 @@ showToc: false
 draft: false
 aliases:
   - /blogger/2012/pitfalls-on-wifsaml2-and-selenium/
+  - /2012/12/pitfalls-on-wifsaml2-and-selenium.html
 description: "Common pitfalls when using Windows Identity Foundation with SAML2 tokens and automating authentication flows with Selenium."
 ---
 

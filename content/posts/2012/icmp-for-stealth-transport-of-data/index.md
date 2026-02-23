@@ -11,6 +11,7 @@ cover:
     small: true
 aliases:
   - /blogger/2012/icmp-for-stealth-transport-of-data/
+  - /2012/03/icmp-for-stealth-transport-of-data.html
 description: "Building a covert channel over ICMP in C# using raw sockets and the NetmonAPI to tunnel data through ping packets."
 ---
 

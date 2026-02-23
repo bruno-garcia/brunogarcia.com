@@ -7,6 +7,7 @@ showToc: false
 draft: false
 aliases:
   - /blogger/2019/nugettrends-net-libraries-download/
+  - /2019/07/nugettrends-net-libraries-download.html
 description: "Introducing NuGet Trends — a web app to compare and visualize .NET library download statistics from NuGet.org over time."
 ---
 

@@ -7,6 +7,7 @@ showToc: false
 draft: false
 aliases:
   - /blogger/2012/simple-tcp-forwarder-in-c/
+  - /2012/10/simple-tcp-forwarder-in-c.html
 description: "A lightweight TCP port forwarder written in C# — simple, async, and easy to embed in your own projects."
 ---
 

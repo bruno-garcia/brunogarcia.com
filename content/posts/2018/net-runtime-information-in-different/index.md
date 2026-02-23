@@ -7,6 +7,7 @@ showToc: false
 draft: false
 aliases:
   - /blogger/2018/net-runtime-information-in-different/
+  - /2018/04/net-runtime-information-in-different.html
 description: "Detecting .NET runtime versions across CoreCLR, Mono, and .NET Framework on different operating systems for Sentry SDK context."
 ---
 

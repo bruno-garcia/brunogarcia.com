@@ -11,6 +11,7 @@ cover:
     small: true
 aliases:
   - /blogger/2012/httpmodules-now-even-easier-to-be/
+  - /2012/02/httpmodules-now-even-easier-to-be.html
 description: "How ASP.NET HttpModules can be exploited by attackers to intercept requests, steal credentials, and compromise web applications."
 ---
 

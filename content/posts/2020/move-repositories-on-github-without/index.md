@@ -7,6 +7,7 @@ showToc: false
 draft: false
 aliases:
   - /blogger/2020/move-repositories-on-github-without/
+  - /2020/09/move-repositories-on-github-without.html
 description: "How to move a Git repository to a new GitHub repo while preserving PR links, tags, and commit history references."
 ---
 
