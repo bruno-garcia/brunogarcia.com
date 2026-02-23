@@ -1,13 +1,13 @@
-# My personal blog
+# brunogarcia.com
 
-This is the source repo of my blog at https://garcia.in. It is built using the static site generator [Hugo](gohugo.io).  
-Theme [PaperMod](https://git.io/hugopapermod).
+Personal website and blog built with [Hugo](https://gohugo.io/) and [PaperMod](https://github.com/adityatelange/hugo-PaperMod). Deployed to [GitHub Pages](https://brunogarcia.com).
 
-## Running with ngrok + live reload
+## Local development
 
-```sh
+```bash
 hugo server -D
 ```
 
-# License
-See LICENSE.md.
+## Deploy
+
+Push to `main` — GitHub Actions builds and deploys automatically.
