@@ -1,0 +1,124 @@
+baseURL: "https://brunogarcia.com"
+languageCode: "en-us"
+title: "Bruno Garcia"
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+paginate: 5
+theme: hugo-PaperMod
+
+enableEmoji: true
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+
+outputFormats:
+  llms:
+    mediaType: "text/plain"
+    baseName: "llms"
+    isPlainText: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - llms
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: dracula
+    lineNos: false
+    guessSyntax: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  description: "Bruno Garcia — Software Engineer. Blog about software development, NuGet Trends, and Code Review Trends."
+  author: Bruno Garcia
+  ShowReadingTime: true
+  defaultTheme: auto
+  ShowShareButtons: false
+  schema:
+    publisherType: "Person"
+
+  displayFullLangName: true
+  images:
+    - "https://brunogarcia.com/assets/img/cover.jpg"
+  cover:
+    responsiveImages: true
+  profileMode:
+    enabled: true
+    title: ""
+    subtitle: >-
+      I'm Bruno, a Senior Engineering Manager at [Sentry](https://sentry.io), leading the teams behind Seer's AI Code Review and Source Code Management integrations.
+      Previously led Session Replay, bootstrapped Sentry's gaming team and launched [console support](https://blog.sentry.io/error-monitoring-and-crash-reporting-for-gaming-consoles/), and managed the Mobile SDK team.
+      I still have a soft spot for working on open source projects like [NuGet Trends](https://nugettrends.com) and [Code Review Trends](https://codereviewtrends.com).
+    imageUrl: "/img/profile.jpg"
+    imageWidth: 160
+    imageHeight: 160
+    imageTitle: "Bruno Garcia"
+  socialIcons:
+    - name: "bluesky"
+      title: "Bluesky"
+      url: "https://bsky.app/profile/brunogarcia.com"
+    - name: "twitter"
+      title: "Twitter"
+      url: "https://twitter.com/brungarc"
+    - name: "github"
+      title: "GitHub"
+      url: "https://github.com/bruno-garcia"
+    - name: "stackoverflow"
+      title: "StackOverflow"
+      url: "https://stackoverflow.com/users/1977143/bruno-garcia"
+    - name: "nuget"
+      title: "NuGet"
+      url: "https://www.nuget.org/profiles/bruno-garcia"
+    - name: "npm"
+      title: "npm"
+      url: "https://www.npmjs.com/~brunogarcia"
+    - name: "linkedin"
+      title: "LinkedIn"
+      url: "https://www.linkedin.com/in/brunog/"
+    - name: "reddit"
+      title: "Reddit"
+      url: "https://www.reddit.com/user/bruno-garcia"
+    - name: "rss"
+      title: "RSS"
+      url: "/index.xml"
+
+taxonomies:
+  tag: tags
+
+
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+  instagram:
+    disable: true
+  x:
+    disable: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: true

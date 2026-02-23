@@ -1,0 +1,18 @@
+<!-- Custom styles -->
+{{- $custom := resources.Get "css/custom.css" | minify | fingerprint -}}
+<link
+    href="{{ $custom.Permalink }}"
+    integrity="{{ $custom.Data.Integrity }}"
+    rel="preload stylesheet" as="style">
+
+<script
+    src="https://browser.sentry-cdn.com/10.39.0/bundle.tracing.min.js"
+    crossorigin="anonymous"
+></script>
+<script>
+Sentry.init({
+  dsn: "https://88e8d79d263e44f0b6e3c3745244ce9c@o117736.ingest.sentry.io/5778766",
+  integrations: [Sentry.browserTracingIntegration()],
+  tracesSampleRate: 1.0,
+});
+</script>

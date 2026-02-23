@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Bruno Garcia</title>
+    <link>http://localhost:8322/posts/</link>
+    <description>Recent content in Posts on Bruno Garcia</description>
+    <image>
+      <title>Bruno Garcia</title>
+      <url>https://brunogarcia.com/assets/img/cover.jpg</url>
+      <link>https://brunogarcia.com/assets/img/cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 May 2021 16:20:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:8322/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pitfalls of Unoptimized NuGet Packages</title>
+      <link>http://localhost:8322/posts/2021/pitfalls-of-unoptimized-nuget-packages/</link>
+      <pubDate>Fri, 21 May 2021 16:20:00 -0400</pubDate>
+      <guid>http://localhost:8322/posts/2021/pitfalls-of-unoptimized-nuget-packages/</guid>
+      <description>Avoid using unoptimized .NET assemblies with UnoptimizedAssemblyDetector.</description>
+    </item>
+    <item>
+      <title>Hell world</title>
+      <link>http://localhost:8322/posts/2020/hell-world/</link>
+      <pubDate>Tue, 29 Dec 2020 18:49:11 -0500</pubDate>
+      <guid>http://localhost:8322/posts/2020/hell-world/</guid>
+      <description>Hosting a blog in preparation for 2021.</description>
+    </item>
+    <item>
+      <title>Move repositories on GitHub without breaking links to PRs</title>
+      <link>http://localhost:8322/posts/2020/move-repositories-on-github-without/</link>
+      <pubDate>Fri, 11 Sep 2020 02:55:00 +0200</pubDate>
+      <guid>http://localhost:8322/posts/2020/move-repositories-on-github-without/</guid>
+      <description>How to move a Git repository to a new GitHub repo while preserving PR links, tags, and commit history references.</description>
+    </item>
+    <item>
+      <title>Swift adventures: CocoaLumberjack logger</title>
+      <link>http://localhost:8322/posts/2020/swift-adventures-cocoalumberjack-logger/</link>
+      <pubDate>Sun, 06 Sep 2020 23:15:00 +0200</pubDate>
+      <guid>http://localhost:8322/posts/2020/swift-adventures-cocoalumberjack-logger/</guid>
+      <description>Integrating CocoaLumberjack with Sentry in Swift - sending iOS log breadcrumbs to your error tracking dashboard.</description>
+    </item>
+    <item>
+      <title>NuGetTrends: .NET libraries download trends</title>
+      <link>http://localhost:8322/posts/2019/nugettrends-net-libraries-download/</link>
+      <pubDate>Tue, 16 Jul 2019 22:47:00 +0200</pubDate>
+      <guid>http://localhost:8322/posts/2019/nugettrends-net-libraries-download/</guid>
+      <description>Introducing NuGet Trends — a web app to compare and visualize .NET library download statistics from NuGet.org over time.</description>
+    </item>
+    <item>
+      <title>.NET runtime information in different systems</title>
+      <link>http://localhost:8322/posts/2018/net-runtime-information-in-different/</link>
+      <pubDate>Sun, 15 Apr 2018 18:06:00 +0200</pubDate>
+      <guid>http://localhost:8322/posts/2018/net-runtime-information-in-different/</guid>
+      <description>Detecting .NET runtime versions across CoreCLR, Mono, and .NET Framework on different operating systems for Sentry SDK context.</description>
+    </item>
+    <item>
+      <title>CI/CD for .NET with GitHub/Travis-CI/AppVeyor/Codecov/NuGet</title>
+      <link>http://localhost:8322/posts/2017/cicd-for-net-with-githubtravis/</link>
+      <pubDate>Sat, 02 Dec 2017 15:14:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2017/cicd-for-net-with-githubtravis/</guid>
+      <description>Setting up CI/CD for .NET Core libraries with GitHub, Travis-CI, AppVeyor, Codecov, and automated NuGet publishing.</description>
+    </item>
+    <item>
+      <title>Wake on Lan in C# and Windows 8</title>
+      <link>http://localhost:8322/posts/2013/wake-on-lan-in-c-and-windows-8/</link>
+      <pubDate>Sun, 21 Apr 2013 20:24:00 +0200</pubDate>
+      <guid>http://localhost:8322/posts/2013/wake-on-lan-in-c-and-windows-8/</guid>
+      <description>Sending Wake-on-LAN magic packets in C# to remotely power on machines over the network, with Windows 8 considerations.</description>
+    </item>
+    <item>
+      <title>Moq Return method not available after Setup</title>
+      <link>http://localhost:8322/posts/2013/moq-return-method-not-available-after/</link>
+      <pubDate>Mon, 04 Mar 2013 21:26:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2013/moq-return-method-not-available-after/</guid>
+      <description>Fix for Moq Return method not showing after Setup — caused by missing generic type parameter when mocking methods.</description>
+    </item>
+    <item>
+      <title>SignalR: Using a Hub instance not created by the HubPipeline is unsupported</title>
+      <link>http://localhost:8322/posts/2013/signalr-using-hub-instance-not-created/</link>
+      <pubDate>Sat, 23 Feb 2013 00:53:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2013/signalr-using-hub-instance-not-created/</guid>
+      <description>Fix for the SignalR error &amp;#39;Using a Hub instance not created by the HubPipeline is unsupported&amp;#39; — use GetHubContext instead of creating a new Hub instance.</description>
+    </item>
+    <item>
+      <title>Regex to match executing a stored procedure within a stored procedure</title>
+      <link>http://localhost:8322/posts/2013/regex-to-match-executing-stored/</link>
+      <pubDate>Sat, 16 Feb 2013 17:55:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2013/regex-to-match-executing-stored/</guid>
+      <description>Using regex to find and match stored procedure calls nested inside other stored procedures in SQL Server.</description>
+    </item>
+    <item>
+      <title>Pitfalls on WIF&#43;SAML2 and Selenium</title>
+      <link>http://localhost:8322/posts/2012/pitfalls-on-wifsaml2-and-selenium/</link>
+      <pubDate>Wed, 12 Dec 2012 21:39:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2012/pitfalls-on-wifsaml2-and-selenium/</guid>
+      <description>Common pitfalls when using Windows Identity Foundation with SAML2 tokens and automating authentication flows with Selenium.</description>
+    </item>
+    <item>
+      <title>Top level domains and punycode with C#</title>
+      <link>http://localhost:8322/posts/2012/top-level-domains-and-punycode-with-c/</link>
+      <pubDate>Sat, 10 Nov 2012 23:37:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2012/top-level-domains-and-punycode-with-c/</guid>
+      <description>Working with internationalized domain names (IDN) and Punycode encoding in C# for top-level domain validation.</description>
+    </item>
+    <item>
+      <title>Simple TCP Forwarder in C#</title>
+      <link>http://localhost:8322/posts/2012/simple-tcp-forwarder-in-c/</link>
+      <pubDate>Tue, 09 Oct 2012 21:43:00 +0200</pubDate>
+      <guid>http://localhost:8322/posts/2012/simple-tcp-forwarder-in-c/</guid>
+      <description>A lightweight TCP port forwarder written in C# — simple, async, and easy to embed in your own projects.</description>
+    </item>
+    <item>
+      <title>ICMP for stealth transport of data</title>
+      <link>http://localhost:8322/posts/2012/icmp-for-stealth-transport-of-data/</link>
+      <pubDate>Sun, 11 Mar 2012 14:14:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2012/icmp-for-stealth-transport-of-data/</guid>
+      <description>Building a covert channel over ICMP in C# using raw sockets and the NetmonAPI to tunnel data through ping packets.</description>
+    </item>
+    <item>
+      <title>HttpModules. Now even easier to be misused.</title>
+      <link>http://localhost:8322/posts/2012/httpmodules-now-even-easier-to-be/</link>
+      <pubDate>Wed, 22 Feb 2012 11:34:00 +0100</pubDate>
+      <guid>http://localhost:8322/posts/2012/httpmodules-now-even-easier-to-be/</guid>
+      <description>How ASP.NET HttpModules can be exploited by attackers to intercept requests, steal credentials, and compromise web applications.</description>
+    </item>
+  </channel>
+</rss>

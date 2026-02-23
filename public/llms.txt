@@ -1,0 +1,22 @@
+# Bruno Garcia
+- [About](http://localhost:8322/about/)
+- [Projects](http://localhost:8322/projects/)
+- [Redirects](http://localhost:8322/redirects/)
+
+## Posts
+- [Pitfalls of Unoptimized NuGet Packages](http://localhost:8322/posts/2021/pitfalls-of-unoptimized-nuget-packages/)
+- [Hell world](http://localhost:8322/posts/2020/hell-world/)
+- [Move repositories on GitHub without breaking links to PRs](http://localhost:8322/posts/2020/move-repositories-on-github-without/)
+- [Swift adventures: CocoaLumberjack logger](http://localhost:8322/posts/2020/swift-adventures-cocoalumberjack-logger/)
+- [NuGetTrends: .NET libraries download trends](http://localhost:8322/posts/2019/nugettrends-net-libraries-download/)
+- [.NET runtime information in different systems](http://localhost:8322/posts/2018/net-runtime-information-in-different/)
+- [CI/CD for .NET with GitHub/Travis-CI/AppVeyor/Codecov/NuGet](http://localhost:8322/posts/2017/cicd-for-net-with-githubtravis/)
+- [Wake on Lan in C# and Windows 8](http://localhost:8322/posts/2013/wake-on-lan-in-c-and-windows-8/)
+- [Moq Return method not available after Setup](http://localhost:8322/posts/2013/moq-return-method-not-available-after/)
+- [SignalR: Using a Hub instance not created by the HubPipeline is unsupported](http://localhost:8322/posts/2013/signalr-using-hub-instance-not-created/)
+- [Regex to match executing a stored procedure within a stored procedure](http://localhost:8322/posts/2013/regex-to-match-executing-stored/)
+- [Pitfalls on WIF+SAML2 and Selenium](http://localhost:8322/posts/2012/pitfalls-on-wifsaml2-and-selenium/)
+- [Top level domains and punycode with C#](http://localhost:8322/posts/2012/top-level-domains-and-punycode-with-c/)
+- [Simple TCP Forwarder in C#](http://localhost:8322/posts/2012/simple-tcp-forwarder-in-c/)
+- [ICMP for stealth transport of data](http://localhost:8322/posts/2012/icmp-for-stealth-transport-of-data/)
+- [HttpModules. Now even easier to be misused.](http://localhost:8322/posts/2012/httpmodules-now-even-easier-to-be/)

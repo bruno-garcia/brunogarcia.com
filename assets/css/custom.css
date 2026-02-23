@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(/fonts/CascadiaCode.woff2);
+}
+
+.figure-border {
+  padding: 15px 15px 0;
+  margin-bottom: 20px;
+  background-color: var(--entry);
+  box-shadow: 0 1px 3px var(--hljs-bg);
+  -moz-box-shadow: 0 1px 3px var(--hljs-bg);
+  -webkit-box-shadow: 0 1px 3px var(--hljs-bg);
+}
+
+.img-center {
+  display: block;
+  margin: 0.7rem auto;
+}
+
+.img-caption {
+  text-align: center;
+  font-style: italic;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: "Cascadia Code", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+}
+
+.footer-projects {
+  margin-bottom: 0.8em;
+  font-size: 0.9em;
+  color: var(--secondary);
+}
+
+.footer-projects a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.footer-projects a:hover {
+  border-bottom-color: var(--primary);
+}
+
+.list .entry-cover.cover-small {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.list .entry-cover.cover-small img {
+  object-fit: contain;
+}
+
+.post-single .post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --main-width: 860px;
+}
+
+.profile_inner a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: var(--content);
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+}

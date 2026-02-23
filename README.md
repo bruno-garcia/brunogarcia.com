@@ -1,21 +1,13 @@
-# index of [brunogarcia.com](https://brunogarcia.com)
+# My personal blog
 
-A single static html file with an image and some links
+This is the source repo of my blog at https://garcia.in. It is built using the static site generator [Hugo](gohugo.io).  
+Theme [PaperMod](https://git.io/hugopapermod).
 
-# Notes to self:
+## Running with ngrok + live reload
 
-## To browse locally
-
-```shell
-docker-compose up
+```sh
+hugo server -D
 ```
-Browse [localhost](http://localhost)
 
-## Deploy to firebase
-
-```shell
-npm install
-npx firebase-tools login
-npx firebase-tools init
-npx firebase-tools deploy
-```
+# License
+See LICENSE.md.
