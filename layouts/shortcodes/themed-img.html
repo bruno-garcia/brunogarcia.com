@@ -1,0 +1,9 @@
+{{ $light := $.Page.Resources.GetMatch (.Get "light") }}
+{{ $dark := $.Page.Resources.GetMatch (.Get "dark") }}
+{{ $alt := .Get "alt" }}
+{{ $href := .Get "href" }}
+
+{{ if $href }}<a href="{{ $href }}">{{ end }}
+<img class="img-light" src="{{ $light.RelPermalink | safeURL }}" alt="{{ $alt }}" loading="lazy">
+<img class="img-dark" src="{{ $dark.RelPermalink | safeURL }}" alt="{{ $alt }}" loading="lazy">
+{{ if $href }}</a>{{ end }}
