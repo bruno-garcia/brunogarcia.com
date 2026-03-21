@@ -9,6 +9,8 @@ ShowBreadCrumbs: false
 
 Analytics and insights into code review activity across GitHub repositories. See how teams review code over time.
 
+[Source on GitHub](https://github.com/bruno-garcia/code-review-trends)
+
 ## [NuGet Trends](https://nugettrends.com)
 
 Historical download statistics for NuGet packages. Compare .NET library adoption over time with data going back to 2013.
