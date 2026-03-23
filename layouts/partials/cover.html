@@ -19,6 +19,10 @@
         {{- $lightCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
         {{- $darkCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.imageDark)) }}
 
+        {{- if $addLink }}
+            <a href="{{ (or $lightCover $darkCover).Permalink }}" target="_blank" rel="noopener noreferrer">
+        {{- end }}
+
         {{- if $lightCover }}
             <img class="img-light" loading="{{ $loading }}" src="{{ $lightCover.Permalink }}" alt="{{ $alt }}"
                  width="{{ $lightCover.Width }}" height="{{ $lightCover.Height }}">
@@ -27,6 +31,10 @@
             <img class="img-dark" loading="{{ $loading }}" src="{{ $darkCover.Permalink }}" alt="{{ $alt }}"
                  width="{{ $darkCover.Width }}" height="{{ $darkCover.Height }}">
         {{- end }}
+
+        {{- if $addLink }}
+            </a>
+        {{- end -}}
 
     {{- else }}
         {{- /* Original PaperMod cover logic for single-image covers */}}
