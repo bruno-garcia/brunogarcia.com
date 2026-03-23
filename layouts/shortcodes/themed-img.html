@@ -1,0 +1,16 @@
+{{ $light := $.Page.Resources.GetMatch (.Get "light") }}
+{{ $dark := $.Page.Resources.GetMatch (.Get "dark") }}
+{{ $alt := .Get "alt" }}
+{{ $href := .Get "href" }}
+
+{{ if not $light }}{{ errorf "themed-img: light image %q not found in page bundle" (.Get "light") }}{{ end }}
+{{ if not $dark }}{{ errorf "themed-img: dark image %q not found in page bundle" (.Get "dark") }}{{ end }}
+
+{{ if and $light $dark }}
+{{ if $href }}<a href="{{ $href }}">{{ end }}
+<img class="img-light" src="{{ $light.RelPermalink | safeURL }}" alt="{{ $alt }}" loading="lazy">
+<img class="img-dark" src="{{ $dark.RelPermalink | safeURL }}" alt="{{ $alt }}" loading="lazy">
+{{ if $href }}</a>{{ end }}
+{{ else if $light }}
+<img src="{{ $light.RelPermalink | safeURL }}" alt="{{ $alt }}" loading="lazy">
+{{ end }}

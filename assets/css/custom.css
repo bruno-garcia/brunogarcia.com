@@ -28,6 +28,12 @@ pre[class*="language-"] {
   text-align: left;
 }
 
+/* Theme-aware images */
+.img-light { display: inline; }
+.img-dark { display: none; }
+[data-theme="dark"] .img-light { display: none !important; }
+[data-theme="dark"] .img-dark { display: inline !important; }
+
 .footer-projects {
   margin-bottom: 0.8em;
   font-size: 0.9em;
