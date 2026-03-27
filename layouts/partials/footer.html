@@ -36,13 +36,17 @@
     let menu = document.getElementById('menu');
     if (menu) {
         // Set the scroll position
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
+        if (localStorage) {
+            const scrollPosition = localStorage.getItem("menu-scroll-position");
+            if (scrollPosition) {
+                menu.scrollLeft = parseInt(scrollPosition, 10);
+            }
         }
         
         menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+            if (localStorage) {
+                localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+            }
         }
     }
 
@@ -89,10 +93,10 @@
         const html = document.querySelector("html");
         if (html.dataset.theme === "dark") {
             html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
+            if (localStorage) localStorage.setItem("pref-theme", 'light');
         } else {
             html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
+            if (localStorage) localStorage.setItem("pref-theme", 'dark');
         }
     })
 
