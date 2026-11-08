@@ -94,7 +94,7 @@ params:
     enabled: true
     title: ""
     subtitle: >-
-      I'm Bruno, a Senior Engineering Manager at [Sentry](https://sentry.io), leading the teams behind Seer's AI Code Review and Source Code Management integrations.
+      I'm Bruno, a Senior Engineering Manager at [Sentry](https://sentry.io), leading the teams building [Seer](https://sentry.io/product/seer/), Sentry's AI debugger.
       Previously led Session Replay, bootstrapped Sentry's gaming team and launched [console support](https://blog.sentry.io/error-monitoring-and-crash-reporting-for-gaming-consoles/), and managed the Mobile SDK team.
       I still have a soft spot for working on open source projects like [NuGet Trends](https://nugettrends.com) and [Code Review Trends](https://codereviewtrends.com).
     imageUrl: "/img/profile.jpg"
