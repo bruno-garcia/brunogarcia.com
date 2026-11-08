@@ -23,17 +23,6 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-          cache-dependency-path: brunogarcia-map/web/package-lock.json
-
-      - name: Build the map bundle
-        working-directory: brunogarcia-map/web
-        run: npm ci && npm run build
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
