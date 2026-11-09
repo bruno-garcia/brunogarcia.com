@@ -4,6 +4,10 @@ title: "Bruno Garcia"
 
 menu:
   main:
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 5
     - identifier: projects
       name: Projects
       url: /projects/
