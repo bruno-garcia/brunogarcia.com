@@ -9,6 +9,6 @@ I'm a Senior Engineering Manager at [Sentry](https://sentry.io), where I work on
 
 I've called five countries home, and with friends and family left behind with each move, they always will be. I travel for history, culture and people, but also to dive and sail. And I love maps, so I [made one](/travel/) for trips down memory lane.
 
-## Elsewhere
+## ~~Elsewhere~~ Everywhere
 
 {{< social-links >}}

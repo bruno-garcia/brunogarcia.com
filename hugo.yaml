@@ -83,7 +83,21 @@ params:
     imageWidth: 160
     imageHeight: 160
     imageTitle: "Bruno Garcia"
+  # The landing page shows these few; the About page lists everything in allSocialIcons.
   socialIcons:
+    - name: "bluesky"
+      title: "Bluesky"
+      url: "https://bsky.app/profile/brunogarcia.com"
+    - name: "twitter"
+      title: "Twitter"
+      url: "https://twitter.com/brungarc"
+    - name: "github"
+      title: "GitHub"
+      url: "https://github.com/bruno-garcia"
+    - name: "linkedin"
+      title: "LinkedIn"
+      url: "https://www.linkedin.com/in/brunog/"
+  allSocialIcons:
     - name: "bluesky"
       title: "Bluesky"
       url: "https://bsky.app/profile/brunogarcia.com"
