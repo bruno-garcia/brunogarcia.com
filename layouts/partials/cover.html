@@ -23,13 +23,18 @@
             <a href="{{ (or $lightCover $darkCover).Permalink }}" target="_blank" rel="noopener noreferrer">
         {{- end }}
 
+        {{- /* In production each is served as WebP, at most 1500px wide. */}}
         {{- if $lightCover }}
-            <img class="img-light" loading="{{ $loading }}" src="{{ $lightCover.Permalink }}" alt="{{ $alt }}"
-                 width="{{ $lightCover.Width }}" height="{{ $lightCover.Height }}">
+            {{- $light := $lightCover }}
+            {{- if $prod }}{{ $light = $lightCover.Resize (printf "%dx webp" (cond (gt $lightCover.Width 1500) 1500 $lightCover.Width)) }}{{ end }}
+            <img class="img-light" loading="{{ $loading }}" src="{{ $light.Permalink }}" alt="{{ $alt }}"
+                 width="{{ $light.Width }}" height="{{ $light.Height }}">
         {{- end }}
         {{- if $darkCover }}
-            <img class="img-dark" loading="{{ $loading }}" src="{{ $darkCover.Permalink }}" alt="{{ $alt }}"
-                 width="{{ $darkCover.Width }}" height="{{ $darkCover.Height }}">
+            {{- $dark := $darkCover }}
+            {{- if $prod }}{{ $dark = $darkCover.Resize (printf "%dx webp" (cond (gt $darkCover.Width 1500) 1500 $darkCover.Width)) }}{{ end }}
+            <img class="img-dark" loading="{{ $loading }}" src="{{ $dark.Permalink }}" alt="{{ $alt }}"
+                 width="{{ $dark.Width }}" height="{{ $dark.Height }}">
         {{- end }}
 
         {{- if $addLink }}
@@ -53,14 +58,23 @@
 
         {{- if $cover -}}
             {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (eq $prod true)) }}
+                {{- /* Every size as WebP, none wider than 1500px: a photo saved as PNG would otherwise ship as
+                       megabytes on the home page. An animated GIF stays animated (and heavy), so give such a post
+                       a still cover image and keep the GIF in the post itself. */}}
+                {{- $max := cond (gt $cover.Width 1500) 1500 $cover.Width }}
+                {{- $srcset := slice }}
+                {{- range $size := $sizes }}
+                    {{- if le (int $size) $max }}
+                        {{- $srcset = $srcset | append (printf "%s %sw" ($cover.Resize (printf "%sx webp" $size)).Permalink $size) }}
+                    {{- end }}
+                {{- end }}
+                {{- if not (in $sizes (string $max)) }}
+                    {{- $srcset = $srcset | append (printf "%s %dw" ($cover.Resize (printf "%dx webp" $max)).Permalink $max) }}
+                {{- end }}
+                {{- $src := $cover.Resize (printf "%dx webp" (cond (gt $max 720) 720 $max)) }}
                 <img loading="{{$loading}}"
-                    srcset='{{- range $size := $sizes -}}
-                                {{- if (ge $cover.Width $size) }}
-                                    {{- printf "%s %s" (($cover.Resize (printf "%sx" $size)).Permalink) (printf "%sw," $size) }}
-                                {{- end }}
-                            {{- end }}
-                            {{- printf "%s %dw" ($cover.Permalink) ($cover.Width) }}'
-                    src="{{ $cover.Permalink }}"
+                    srcset="{{ delimit $srcset ", " }}"
+                    src="{{ $src.Permalink }}"
                     sizes="(min-width: 768px) 720px, 100vw"
                     width="{{ $cover.Width }}" height="{{ $cover.Height }}"
                     alt="{{ $alt }}">

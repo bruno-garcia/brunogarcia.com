@@ -6,7 +6,7 @@ author: "Bruno Garcia"
 showToc: false
 draft: false
 cover:
-    image: "sentry-cocoalumberjack.gif"
+    image: "cover.png"
     relative: true
     hiddenInSingle: true
     small: true
