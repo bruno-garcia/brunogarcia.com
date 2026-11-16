@@ -8,6 +8,10 @@ menu:
       name: Blog
       url: /posts/
       weight: 5
+    - identifier: travel
+      name: Travel
+      url: /travel/
+      weight: 7
     - identifier: projects
       name: Projects
       url: /projects/

@@ -1,0 +1,27 @@
+{{- /*
+  The map page. The bundle is built in the private brunogarcia-map repo and copied into static/travel/ by
+  scripts/sync-map.sh; its URLs are relative, so it is served from /travel/. The query string busts caches when it changes.
+*/ -}}
+{{- define "main" -}}
+<style>
+  /* The header's height varies (the menu wraps on a phone), so the map takes whatever the column leaves. */
+  body:has(.map-page) { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
+  /* PaperMod always shows a scrollbar track; with nothing to scroll here it reads as a border on the right. */
+  html:has(.map-page) { overflow-y: hidden; }
+  .main { max-width: none; padding: 0; min-height: 0; flex: 1; width: 100%; }
+  .map-page { position: relative; height: 100%; view-transition-name: travel-map; }
+  .map-page__unbuilt { max-width: var(--main-width); margin: auto; padding: var(--gap); }
+</style>
+{{- if fileExists "static/travel/map.js" -}}
+{{- $v := readFile "static/travel/map.js" | md5 | truncate 10 "" -}}
+<link rel="stylesheet" href="/travel/map.css?v={{ $v }}">
+<div class="map-page">
+  <div id="map" aria-label="{{ .Title }}"></div>
+</div>
+<script type="module" src="/travel/map.js?v={{ $v }}"></script>
+{{- else -}}
+<div class="map-page map-page__unbuilt">
+  <p>The map bundle is missing. Run <code>npm run build:public</code> in brunogarcia-map/web, then run <code>scripts/sync-map.sh</code>.</p>
+</div>
+{{- end -}}
+{{- end -}}
