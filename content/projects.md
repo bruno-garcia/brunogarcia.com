@@ -5,17 +5,17 @@ hideMeta: true
 ShowBreadCrumbs: false
 ---
 
-## [Code Review Trends](https://codereviewtrends.com)
+## [Code Review Trends](https://github.com/bruno-garcia/code-review-trends)
 
 Analytics and insights into code review activity across GitHub repositories. See how teams review code over time.
 
-[Source on GitHub](https://github.com/bruno-garcia/code-review-trends)
+[codereviewtrends.com](https://codereviewtrends.com)
 
-## [NuGet Trends](https://nugettrends.com)
+## [NuGet Trends](https://github.com/NuGetTrends/nuget-trends)
 
 Historical download statistics for NuGet packages. Compare .NET library adoption over time with data going back to 2013.
 
-[Source on GitHub](https://github.com/NuGetTrends/nuget-trends)
+[nugettrends.com](https://nugettrends.com)
 
 ## [Sentry .NET SDK](https://github.com/getsentry/sentry-dotnet)
 
