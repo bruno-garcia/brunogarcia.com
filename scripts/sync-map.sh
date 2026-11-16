@@ -20,4 +20,13 @@ mkdir -p "$dest/mini"
 cp "$src/../src/map/fallback/land-110m.json" "$dest/mini/land.json"
 jq -c '[.[] | [((.lat*2|round)/2), ((.lon*2|round)/2)]] | unique | flatten' "$dest/data/stays.json" > "$dest/mini/points.json"
 
-echo "synced $(find "$dest" -type f | wc -l | tr -d ' ') files from $src"
+# Which map commit this bundle came from, so a stack trace can be traced back to its source. "-dirty"
+# means the build had uncommitted changes. The build uploads its source maps to Sentry when
+# SENTRY_AUTH_TOKEN is set; without them, stack traces from the map stay minified.
+map_repo="$src/../.."
+commit="$(git -C "$map_repo" rev-parse HEAD)"
+git -C "$map_repo" diff --quiet HEAD -- web || commit="$commit-dirty"
+echo "$commit" > "$dest/VERSION"
+grep -q _sentryDebugIds "$dest/map.js" || echo "warning: no Sentry debug IDs in map.js; was SENTRY_AUTH_TOKEN set for the build?" >&2
+
+echo "synced $(find "$dest" -type f | wc -l | tr -d ' ') files from $src (map commit $commit)"
