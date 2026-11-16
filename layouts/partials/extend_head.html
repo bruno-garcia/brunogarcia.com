@@ -5,21 +5,18 @@
     integrity="{{ $custom.Data.Integrity }}"
     rel="preload stylesheet" as="style">
 
-<!-- Sentry loads async so it never holds up the page; it initializes as soon as the bundle arrives. -->
+<!--
+  Sentry's Loader Script: a small script that runs first and buffers unhandled errors and promise
+  rejections, then fetches the full SDK asynchronously and sends what it buffered once the SDK is up.
+  Tracing and the SDK version (11.x; Sentry's "latest" option is stuck on v7) are set in the project's Loader Script settings in Sentry.
+-->
 <script>
-function initSentry() {
-  Sentry.init({
-    dsn: "https://88e8d79d263e44f0b6e3c3745244ce9c@o117736.ingest.sentry.io/5778766",
-    // Local previews (hugo server) report as development, so they stay out of the site's numbers.
-    environment: location.hostname === "brunogarcia.com" ? "production" : "development",
-    integrations: [Sentry.browserTracingIntegration()],
-    tracesSampleRate: 1.0,
-  });
-}
+  window.sentryOnLoad = function () {
+    Sentry.init({
+      // Local previews (hugo server) report as development, so they stay out of the site's numbers.
+      environment: location.hostname === "brunogarcia.com" ? "production" : "development",
+      tracesSampleRate: 1.0,
+    });
+  };
 </script>
-<script
-    async
-    src="https://browser.sentry-cdn.com/10.39.0/bundle.tracing.min.js"
-    crossorigin="anonymous"
-    onload="initSentry()"
-></script>
+<script src="https://js.sentry-cdn.com/88e8d79d263e44f0b6e3c3745244ce9c.min.js" crossorigin="anonymous"></script>
