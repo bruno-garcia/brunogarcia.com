@@ -36,3 +36,15 @@ Basic Authentication for ASP.NET Core. A lightweight middleware that plugs into 
 ## [SentryCocoaLumberjack](https://github.com/bruno-garcia/SentryCocoaLumberjack)
 
 A Swift package that integrates [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) with Sentry, sending iOS log messages as breadcrumbs. Available on the [Swift Package Index](https://swiftpackageindex.com/bruno-garcia/SentryCocoaLumberjack). Read the [blog post](/posts/2020/swift-adventures-cocoalumberjack-logger/).
+
+## [badges.bar](https://github.com/bruno-garcia/badges.bar)
+
+A Dart service and library that rendered SVG badges for [pub.dev](https://pub.dev) package metrics. The service ran from 2020 to 2022; the library is still available.
+
+## [oxideoverflow](https://github.com/bruno-garcia/oxideoverflow)
+
+A small Rust worker that posted new [Sentry questions](https://stackoverflow.com/questions/tagged/sentry) from Stack Overflow into Sentry's public Discord, back when Stack Overflow was where developers asked. It was also an excuse to write some Rust and dogfood Sentry's Rust SDK, with the worker reporting its own crashes. I was answering most of those questions anyway: at the time I was the [top answerer](https://stackoverflow.com/tags/sentry/topusers) for the tag, with over 80 answers.
+
+## [RemindTV](https://web.archive.org/web/20150419073704/http://www.remindtv.com/)
+
+Born out of never remembering when our favorite TV shows would air: sign up, pick the shows you watch, and get an alert when a new episode is about to be broadcast. Live from 2010 to 2015; the link above is a snapshot on the Wayback Machine.
