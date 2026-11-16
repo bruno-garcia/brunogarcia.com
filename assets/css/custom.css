@@ -78,26 +78,39 @@ pre[class*="language-"] {
 .social-icons svg {
   width: 24px;
   height: 24px;
+  transition: transform 0.2s ease;
 }
 
-/* The small globe in the landing page's corner, linking to the travel map. */
-.travel-globe {
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    z-index: 10;
-    width: 120px;
-    height: 120px;
+/* The same lift as the travel globe; only the icon grows, so the About page's labels stay put. */
+.social-icons a:hover svg {
+  transform: scale(1.12);
+}
+
+/* The travel globe: the last link in the landing page's row of social icons, a little larger than them. */
+.social-icons .travel-globe {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    align-self: center;
     border-radius: 50%;
     background: #0b0f14;
-    box-shadow: 0 0 0 1px rgba(77, 171, 247, 0.25), 0 0 24px rgba(77, 171, 247, 0.18), 0 6px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0 1px rgba(77, 171, 247, 0.3), 0 0 12px rgba(77, 171, 247, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     view-transition-name: travel-map;
 }
 
-.travel-globe:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 0 1px rgba(77, 171, 247, 0.45), 0 0 32px rgba(77, 171, 247, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
+.social-icons .travel-globe:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 1px rgba(77, 171, 247, 0.5), 0 0 18px rgba(77, 171, 247, 0.35);
+}
+
+:root[data-theme="light"] .social-icons .travel-globe {
+    background: #dfe7f0;
+    box-shadow: 0 0 0 1px rgba(24, 100, 171, 0.25), 0 0 12px rgba(24, 100, 171, 0.12);
+}
+
+:root[data-theme="light"] .social-icons .travel-globe:hover {
+    box-shadow: 0 0 0 1px rgba(24, 100, 171, 0.4), 0 0 18px rgba(24, 100, 171, 0.22);
 }
 
 .travel-globe canvas {
@@ -105,33 +118,6 @@ pre[class*="language-"] {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-}
-
-:root[data-theme="light"] .travel-globe {
-    background: #dfe7f0;
-    box-shadow: 0 0 0 1px rgba(24, 100, 171, 0.2), 0 0 24px rgba(24, 100, 171, 0.12), 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-:root[data-theme="light"] .travel-globe:hover {
-    box-shadow: 0 0 0 1px rgba(24, 100, 171, 0.35), 0 0 32px rgba(24, 100, 171, 0.2), 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* The scroll-to-top button shares the corner; lift it above the globe. */
-body:has(.travel-globe) .top-link {
-    bottom: 160px;
-}
-
-@media (max-width: 700px) {
-    .travel-globe {
-        width: 84px;
-        height: 84px;
-        right: 16px;
-        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-    }
-
-    body:has(.travel-globe) .top-link {
-        bottom: 116px;
-    }
 }
 
 /* Clicking the globe grows it into the full map, where the browser supports cross-page transitions. */

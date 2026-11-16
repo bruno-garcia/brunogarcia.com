@@ -1,4 +1,4 @@
-// The small spinning globe in the corner of the landing page; it links to the full map at /travel/.
+// The small spinning globe in the landing page's row of social icons; it links to the full map at /travel/.
 // Land is painted once into an equirectangular mask and each frame samples it per pixel through an inverse
 // orthographic projection, so the horizon needs no polygon clipping. Visited places are drawn as dots on top.
 (function () {
@@ -92,6 +92,8 @@
 
     // Dots, brighter towards the middle of the disc.
     const sinT = Math.sin(TILT), cosT = Math.cos(TILT), c = size / 2;
+    // Dots scale with the globe: about a pixel across on a 120px globe, never smaller than half that.
+    const dotRadius = Math.max(0.5, radius / dpr / 55) * dpr;
     ctx.fillStyle = dot;
     for (let k = 0; k < points.length; k += 2) {
       const la = points[k] * Math.PI / 180, lo = points[k + 1] * Math.PI / 180 - rotation;
@@ -100,7 +102,7 @@
       if (depth <= 0) continue;
       ctx.globalAlpha = 0.35 + 0.65 * depth;
       ctx.beginPath();
-      ctx.arc(c + radius * cosLa * Math.sin(lo), c - radius * (cosT * Math.sin(la) - sinT * cosLa * cosLo), 1.1 * dpr, 0, 2 * Math.PI);
+      ctx.arc(c + radius * cosLa * Math.sin(lo), c - radius * (cosT * Math.sin(la) - sinT * cosLa * cosLo), dotRadius, 0, 2 * Math.PI);
       ctx.fill();
     }
     ctx.globalAlpha = 1;

@@ -1,7 +1,4 @@
 {{- if and .IsHome (fileExists "static/travel/mini/points.json") }}
-<a class="travel-globe" href="/travel/" aria-label="Travel: every place I have been" title="Travel">
-    <canvas aria-hidden="true"></canvas>
-</a>
 {{- $js := resources.Get "js/travel-globe.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- end }}
