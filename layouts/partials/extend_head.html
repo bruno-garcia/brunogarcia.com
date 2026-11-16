@@ -10,6 +10,8 @@
 function initSentry() {
   Sentry.init({
     dsn: "https://88e8d79d263e44f0b6e3c3745244ce9c@o117736.ingest.sentry.io/5778766",
+    // Local previews (hugo server) report as development, so they stay out of the site's numbers.
+    environment: location.hostname === "brunogarcia.com" ? "production" : "development",
     integrations: [Sentry.browserTracingIntegration()],
     tracesSampleRate: 1.0,
   });
