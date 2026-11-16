@@ -8,7 +8,7 @@
 <!--
   Sentry's Loader Script: a small script that runs first and buffers unhandled errors and promise
   rejections, then fetches the full SDK asynchronously and sends what it buffered once the SDK is up.
-  Tracing and the SDK version (11.x; Sentry's "latest" option is stuck on v7) are set in the project's Loader Script settings in Sentry.
+  Tracing, logs and the SDK version (11.x; Sentry's "latest" option is stuck on v7) are set in the project's Loader Script settings in Sentry.
 -->
 <script>
   window.sentryOnLoad = function () {
@@ -16,6 +16,9 @@
       // Local previews (hugo server) report as development, so they stay out of the site's numbers.
       environment: location.hostname === "brunogarcia.com" ? "production" : "development",
       tracesSampleRate: 1.0,
+      // console.log/warn/error become Sentry Logs, so failures the page handles itself (the travel map
+      // logs "could not start", a lost graphics context, tiles and data that fail) are still visible.
+      integrations: [Sentry.consoleLoggingIntegration({ levels: ["log", "warn", "error"] })],
     });
   };
 </script>
