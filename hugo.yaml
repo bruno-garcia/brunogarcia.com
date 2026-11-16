@@ -59,7 +59,7 @@ minify:
 
 params:
   env: production
-  description: "Bruno Garcia — Software Engineer. Blog about software development, NuGet Trends, and Code Review Trends."
+  description: "Bruno Garcia — Senior Engineering Manager at Sentry. Writing about software development, open source and travel."
   author: Bruno Garcia
   ShowReadingTime: true
   defaultTheme: auto
@@ -78,7 +78,7 @@ params:
     subtitle: >-
       I'm Bruno, a Senior Engineering Manager at [Sentry](https://sentry.io), where I work on [Seer](https://sentry.io/product/seer/), Sentry's AI debugger.
       Previously led Session Replay, bootstrapped Sentry's gaming team, launched [console support](https://blog.sentry.io/error-monitoring-and-crash-reporting-for-gaming-consoles/), and managed SDK teams.
-      I still have a soft spot for working on open source projects like [NuGet Trends](https://nugettrends.com) and [Code Review Trends](https://codereviewtrends.com).
+      I still have a soft spot for working on [open source projects](https://github.com/bruno-garcia).
     imageUrl: "/img/profile.jpg"
     imageWidth: 160
     imageHeight: 160
